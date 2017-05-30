@@ -33,7 +33,7 @@ function Servo:restart()
     self.pre_degrees = False
   end
   tmr.delay(500000)
-  self:move(180)
+  self:move(150)
 end
 
 function Servo:start_led(ms)
@@ -69,7 +69,7 @@ end
 
 function Servo:pos_4()
   self:restart()
-  self:move(90)
+  self:move(93)
   self:start_led(5000)
 end
 
@@ -77,7 +77,7 @@ function Servo:pos_5()
   self:restart()
   self.pre_degrees = 90
   self:move(50)
-  self:move(125)
+  self:move(119)
   self:start_led(5000)
 end
 
@@ -91,10 +91,10 @@ end
 function Servo:dial(feeling)
   self.feelings = {
     ["like"]=self.pos_0,
-    ["laugh"]=self.pos_1,
-    ["heart"]=self.pos_2,
-    ["surprise"]=self.pos_3,
-    ["cry"]=self.pos_4,
+    ["haha"]=self.pos_1,
+    ["love"]=self.pos_2,
+    ["wow"]=self.pos_3,
+    ["sad"]=self.pos_4,
     ["angry"]=self.pos_5,
     ["beeva"]=self.pos_6,
   }
