@@ -44,7 +44,7 @@ end
 
 -- WiFi events
 function print_ip()
-  addr, nm, MQTT_BROKER_IP = wifi.sta.getip()
+  addr, nm, gw = wifi.sta.getip()
   print("[WIFI] GOTIP: "..addr)
   launch_program()
 end
@@ -66,6 +66,7 @@ print("[NODEMCU] Thing Id: "..THING_ID)
 
 -- Create servo object
 servo = Servo(SERVO_PIN, LED_PIN)
+servo:move(90)
 servo:restart()
 
 -- Launch WiFi
